@@ -17,11 +17,11 @@ import retrofit2.http.Query;
 
 public interface RetrofitInterface {
     @Headers({
-            "x-api-key: R9FH5BCSKP8XQGMC6OHIT",
+            "x-api-key: R9OH5BHSKP8XELMQGMC6OBAZ",
             "Authorization: Basic T2ZmZXItQWRtaW46b2ZmZXJfYWRtaW5fMTIzKjg5MA==",
             "cache-control: no-cache"
     })
     @Multipart
-    @POST("api/Portfolio")
-    Call<Response> uploadImage(@Part("user_token") RequestBody user_token,@Part MultipartBody.Part img_file);
+    @POST("api/user/Details/pay_slip_image_upload")
+    Call<Response> uploadImage(@Part("token") RequestBody token,@Part MultipartBody.Part pay_slip_image);
 }

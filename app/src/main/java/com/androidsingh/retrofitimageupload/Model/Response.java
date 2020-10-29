@@ -4,12 +4,18 @@ import com.google.gson.annotations.SerializedName;
 
 public class Response {
     @SerializedName("status")
-    private String status;
+    private int status;
 
     @SerializedName("error")
     private String error;
 
-    public String getStatus() {
+    @SerializedName("message")
+    private String message;
+
+    @SerializedName("img_url")
+    private String imgURL;
+
+    public int getStatus() {
         return status;
     }
 
@@ -21,6 +27,7 @@ public class Response {
         return message;
     }
 
-    @SerializedName("message")
-    private String message;
+    public String getImgURL() {
+        return imgURL;
+    }
 }
